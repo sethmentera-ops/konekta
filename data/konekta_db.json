@@ -1,0 +1,729 @@
+{
+  "users": [
+    {
+      "id": "usr_elena",
+      "email": "elena@konekta.com",
+      "phone": "+639171234567",
+      "passwordHash": "$2b$10$TfG3wbOGZLi5UDxYLKKHrO76VeneVtPsF1Gux2LEjFo5mJyuIj5IS",
+      "role": "admin",
+      "isEmailVerified": true,
+      "isPhoneVerified": true,
+      "createdAt": "2026-09-22T14:39:35.471Z",
+      "updatedAt": "2026-10-22T14:52:35.450Z"
+    },
+    {
+      "id": "usr_marcus",
+      "email": "marcus@konekta.com",
+      "phone": "+447911123456",
+      "passwordHash": "$2b$10$TfG3wbOGZLi5UDxYLKKHrO76VeneVtPsF1Gux2LEjFo5mJyuIj5IS",
+      "role": "user",
+      "isEmailVerified": true,
+      "isPhoneVerified": true,
+      "createdAt": "2026-09-27T14:39:35.471Z",
+      "updatedAt": "2026-10-22T11:39:35.471Z"
+    },
+    {
+      "id": "usr_sofia",
+      "email": "sofia@konekta.com",
+      "phone": "+34612345678",
+      "passwordHash": "$2b$10$TfG3wbOGZLi5UDxYLKKHrO76VeneVtPsF1Gux2LEjFo5mJyuIj5IS",
+      "role": "user",
+      "isEmailVerified": true,
+      "isPhoneVerified": true,
+      "createdAt": "2026-10-02T14:39:35.471Z",
+      "updatedAt": "2026-10-22T09:39:35.471Z"
+    },
+    {
+      "id": "usr_kenji",
+      "email": "kenji@konekta.com",
+      "phone": "+819012345678",
+      "passwordHash": "$2b$10$TfG3wbOGZLi5UDxYLKKHrO76VeneVtPsF1Gux2LEjFo5mJyuIj5IS",
+      "role": "user",
+      "isEmailVerified": true,
+      "isPhoneVerified": true,
+      "createdAt": "2026-10-07T14:39:35.471Z",
+      "updatedAt": "2026-10-22T02:39:35.471Z"
+    },
+    {
+      "id": "usr_amara",
+      "email": "amara@konekta.com",
+      "phone": "+2348012345678",
+      "passwordHash": "$2b$10$TfG3wbOGZLi5UDxYLKKHrO76VeneVtPsF1Gux2LEjFo5mJyuIj5IS",
+      "role": "user",
+      "isEmailVerified": true,
+      "isPhoneVerified": true,
+      "createdAt": "2026-10-12T14:39:35.471Z",
+      "updatedAt": "2026-10-21T14:39:35.471Z"
+    },
+    {
+      "id": "usr_1792680811478_ewltq",
+      "email": "tester_1792680811227@example.com",
+      "passwordHash": "$2b$10$960HMqYo7/qi/m7AG5EDmeA1ACirZ7zxo4jomPTvDN5ieYUkEc.ri",
+      "role": "user",
+      "isEmailVerified": true,
+      "isPhoneVerified": false,
+      "createdAt": "2026-10-22T14:53:31.478Z",
+      "updatedAt": "2026-10-22T14:53:31.478Z"
+    },
+    {
+      "id": "usr_1792680811501_8tqi9",
+      "phone": "+63999236312",
+      "role": "user",
+      "isEmailVerified": false,
+      "isPhoneVerified": true,
+      "createdAt": "2026-10-22T14:53:31.501Z",
+      "updatedAt": "2026-10-22T14:53:31.501Z"
+    }
+  ],
+  "profiles": [
+    {
+      "userId": "usr_elena",
+      "displayName": "Elena Vance",
+      "username": "elenavance",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Visual artist, street photographer & community builder from Manila 🇵🇭. Capturing raw urban stories and connecting creatives across borders.",
+      "location": "Manila, Philippines",
+      "website": "https://elenavance.art",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-09-22T14:39:35.471Z",
+      "updatedAt": "2026-10-22T13:39:35.471Z"
+    },
+    {
+      "userId": "usr_marcus",
+      "displayName": "Marcus Sterling",
+      "username": "marcus_ux",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Product Designer & Design Systems enthusiast based in London 🇬🇧. Obsessed with clean typography, accessibility, and human-centered technology.",
+      "location": "London, United Kingdom",
+      "website": "https://marcussterling.design",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-09-27T14:39:35.471Z",
+      "updatedAt": "2026-10-22T11:39:35.471Z"
+    },
+    {
+      "userId": "usr_sofia",
+      "displayName": "Sofia Rodriguez",
+      "username": "sofia_voyage",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Travel journalist & slow food advocate from Barcelona 🇪🇸. Currently exploring hidden coastal communities.",
+      "location": "Barcelona, Spain",
+      "website": "https://sofiarodriguez.me",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-10-02T14:39:35.471Z",
+      "updatedAt": "2026-10-22T09:39:35.471Z"
+    },
+    {
+      "userId": "usr_kenji",
+      "displayName": "Kenji Sato",
+      "username": "kenjicodes",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Indie software engineer in Tokyo 🇯🇵. Building open web tools, tinkering with distributed systems and analog synthesizers.",
+      "location": "Tokyo, Japan",
+      "website": "https://kenjisato.dev",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-10-07T14:39:35.471Z",
+      "updatedAt": "2026-10-22T02:39:35.471Z"
+    },
+    {
+      "userId": "usr_amara",
+      "displayName": "Amara Okafor",
+      "username": "amara_speaks",
+      "avatarUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Social impact lead & educator in Lagos 🇳🇬. Championing tech literacy for girls and grassroots cross-continental exchange.",
+      "location": "Lagos, Nigeria",
+      "website": "https://amaraokafor.org",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-10-12T14:39:35.471Z",
+      "updatedAt": "2026-10-21T14:39:35.471Z"
+    },
+    {
+      "userId": "usr_1792680811478_ewltq",
+      "displayName": "Test User Alpha",
+      "username": "tester_1792680811227",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741855?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Updated bio testing profile editor",
+      "location": "Cebu, Philippines",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-10-22T14:53:31.478Z",
+      "updatedAt": "2026-10-22T14:53:31.506Z"
+    },
+    {
+      "userId": "usr_1792680811501_8tqi9",
+      "displayName": "Mobile Tester",
+      "username": "phone_1792680811497",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "bio": "Connected via verified mobile phone on KONEKTA.",
+      "location": "International",
+      "privacyVisibility": "public",
+      "defaultPostVisibility": "public",
+      "createdAt": "2026-10-22T14:53:31.501Z",
+      "updatedAt": "2026-10-22T14:53:31.501Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_1792680766939_qkdax",
+      "authorId": "usr_elena",
+      "content": "Testing real-time publishing on KONEKTA! 🚀",
+      "mediaUrls": [],
+      "groupId": null,
+      "repostOfPostId": null,
+      "visibility": "public",
+      "createdAt": "2026-10-22T14:52:46.939Z",
+      "updatedAt": "2026-10-22T14:52:46.939Z"
+    },
+    {
+      "id": "post_1",
+      "authorId": "usr_elena",
+      "content": "Golden hour over Manila Bay today. There is an unspoken poetry in the rhythm of our daily commute when the sky turns lavender and gold. 🌇\n\nHope everyone is finding quiet moments of inspiration amid the bustle!",
+      "mediaUrls": [
+        "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "groupId": null,
+      "repostOfPostId": null,
+      "visibility": "public",
+      "createdAt": "2026-10-22T08:39:35.471Z",
+      "updatedAt": "2026-10-22T08:39:35.471Z"
+    },
+    {
+      "id": "post_2",
+      "authorId": "usr_marcus",
+      "content": "Just shipped the first component library draft for our international platform! Design systems truly flourish when built with multi-lingual scripts and variable font optical sizes in mind from day one. What are your core guidelines when designing across boundaries?",
+      "mediaUrls": [],
+      "groupId": "grp_creatives",
+      "repostOfPostId": null,
+      "visibility": "group",
+      "createdAt": "2026-10-22T00:39:35.471Z",
+      "updatedAt": "2026-10-22T00:39:35.471Z"
+    },
+    {
+      "id": "post_3",
+      "authorId": "usr_sofia",
+      "content": "Morning walk through Gothic Quarter alleys in Barcelona. Warm espresso, freshly baked pan con tomate, and scribbling ideas for the new cultural dispatch series.",
+      "mediaUrls": [
+        "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "groupId": null,
+      "repostOfPostId": null,
+      "visibility": "public",
+      "createdAt": "2026-10-21T16:39:35.471Z",
+      "updatedAt": "2026-10-21T16:39:35.471Z"
+    },
+    {
+      "id": "post_4",
+      "authorId": "usr_kenji",
+      "content": "Experimenting with local-first peer sync and lightweight client-side state. The modern web platform has progressed tremendously—building fast, resilient applications without heavy lock-in is more achievable than ever. 💻⚡",
+      "mediaUrls": [],
+      "groupId": "grp_indiedev",
+      "repostOfPostId": null,
+      "visibility": "group",
+      "createdAt": "2026-10-21T08:39:35.471Z",
+      "updatedAt": "2026-10-21T08:39:35.471Z"
+    },
+    {
+      "id": "post_5",
+      "authorId": "usr_amara",
+      "content": "Excited to announce our upcoming youth tech mentorship session in Lagos! We have 45 brilliant young women joining us to learn their first lines of code and build community problem-solving apps. “Bringing people closer” starts right here. 🌱✨",
+      "mediaUrls": [
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "groupId": null,
+      "repostOfPostId": null,
+      "visibility": "public",
+      "createdAt": "2026-10-20T22:39:35.471Z",
+      "updatedAt": "2026-10-20T22:39:35.471Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "cmt_1",
+      "postId": "post_1",
+      "authorId": "usr_marcus",
+      "content": "Breathtaking light Elena! The subtle reflection on the water gives it incredible depth.",
+      "createdAt": "2026-10-22T09:39:35.471Z",
+      "updatedAt": "2026-10-22T09:39:35.471Z"
+    },
+    {
+      "id": "cmt_2",
+      "postId": "post_1",
+      "authorId": "usr_sofia",
+      "content": "I miss Manila so much! Need to visit again soon.",
+      "createdAt": "2026-10-22T10:39:35.471Z",
+      "updatedAt": "2026-10-22T10:39:35.471Z"
+    },
+    {
+      "id": "cmt_3",
+      "postId": "post_2",
+      "authorId": "usr_kenji",
+      "content": "Right-to-left layout testing and bidirectional text support! Also testing font fallback cascades.",
+      "createdAt": "2026-10-22T02:39:35.471Z",
+      "updatedAt": "2026-10-22T02:39:35.471Z"
+    },
+    {
+      "id": "cmt_4",
+      "postId": "post_5",
+      "authorId": "usr_elena",
+      "content": "Huge congratulations Amara! Inspiring work, wishing the cohort the absolute best.",
+      "createdAt": "2026-10-21T03:39:35.471Z",
+      "updatedAt": "2026-10-21T03:39:35.471Z"
+    },
+    {
+      "id": "cmt_1792680811526_wsos",
+      "postId": "post_1",
+      "authorId": "usr_elena",
+      "content": "Automated test comment on post 1",
+      "createdAt": "2026-10-22T14:53:31.526Z",
+      "updatedAt": "2026-10-22T14:53:31.526Z"
+    }
+  ],
+  "reactions": [
+    {
+      "id": "rx_1",
+      "postId": "post_1",
+      "userId": "usr_marcus",
+      "type": "love",
+      "createdAt": "2026-10-22T09:39:35.471Z"
+    },
+    {
+      "id": "rx_2",
+      "postId": "post_1",
+      "userId": "usr_sofia",
+      "type": "like",
+      "createdAt": "2026-10-22T10:39:35.471Z"
+    },
+    {
+      "id": "rx_3",
+      "postId": "post_1",
+      "userId": "usr_kenji",
+      "type": "celebrate",
+      "createdAt": "2026-10-22T11:39:35.471Z"
+    },
+    {
+      "id": "rx_4",
+      "postId": "post_2",
+      "userId": "usr_elena",
+      "type": "support",
+      "createdAt": "2026-10-22T01:39:35.471Z"
+    },
+    {
+      "id": "rx_5",
+      "postId": "post_5",
+      "userId": "usr_elena",
+      "type": "celebrate",
+      "createdAt": "2026-10-21T00:39:35.471Z"
+    },
+    {
+      "id": "rx_6",
+      "postId": "post_5",
+      "userId": "usr_marcus",
+      "type": "love",
+      "createdAt": "2026-10-21T02:39:35.471Z"
+    },
+    {
+      "id": "rx_1792680811522_089b",
+      "postId": "post_1",
+      "userId": "usr_elena",
+      "type": "celebrate",
+      "createdAt": "2026-10-22T14:53:31.522Z"
+    }
+  ],
+  "friendRequests": [
+    {
+      "id": "fr_1",
+      "senderId": "usr_kenji",
+      "receiverId": "usr_elena",
+      "status": "accepted",
+      "createdAt": "2026-10-22T06:39:35.471Z",
+      "updatedAt": "2026-10-22T14:53:31.536Z"
+    },
+    {
+      "id": "fr_2",
+      "senderId": "usr_amara",
+      "receiverId": "usr_marcus",
+      "status": "pending",
+      "createdAt": "2026-10-22T10:39:35.471Z",
+      "updatedAt": "2026-10-22T10:39:35.471Z"
+    }
+  ],
+  "friendships": [
+    {
+      "id": "fs_1",
+      "user1Id": "usr_elena",
+      "user2Id": "usr_marcus",
+      "createdAt": "2026-10-10T02:39:35.471Z"
+    },
+    {
+      "id": "fs_2",
+      "user1Id": "usr_elena",
+      "user2Id": "usr_sofia",
+      "createdAt": "2026-10-10T22:39:35.471Z"
+    },
+    {
+      "id": "fs_3",
+      "user1Id": "usr_marcus",
+      "user2Id": "usr_kenji",
+      "createdAt": "2026-10-14T06:39:35.471Z"
+    },
+    {
+      "id": "fs_4",
+      "user1Id": "usr_sofia",
+      "user2Id": "usr_amara",
+      "createdAt": "2026-10-16T08:39:35.471Z"
+    },
+    {
+      "id": "fs_1792680811536",
+      "user1Id": "usr_kenji",
+      "user2Id": "usr_elena",
+      "createdAt": "2026-10-22T14:53:31.536Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": "grp_creatives",
+      "name": "Global Creators & Visual Artists",
+      "slug": "global-creatives",
+      "description": "A supportive international hub for photographers, digital painters, filmmakers, and storytellers sharing techniques, critiques, and collaborations.",
+      "coverUrl": "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=1200&q=80",
+      "avatarUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400&q=80",
+      "creatorId": "usr_elena",
+      "isPrivate": false,
+      "rules": "1. Be kind and constructive. 2. Credit original sources. 3. No spam or self-promotion without context.",
+      "createdAt": "2026-10-01T18:39:35.471Z",
+      "updatedAt": "2026-10-22T12:39:35.471Z"
+    },
+    {
+      "id": "grp_indiedev",
+      "name": "Indie Makers & Open Tech",
+      "slug": "indie-makers",
+      "description": "Founders, developers, and designers building sustainable web and mobile products openly in public.",
+      "coverUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+      "avatarUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80",
+      "creatorId": "usr_kenji",
+      "isPrivate": false,
+      "rules": "Share your milestones, ask for real feedback, and help fellow makers.",
+      "createdAt": "2026-10-05T22:39:35.471Z",
+      "updatedAt": "2026-10-22T04:39:35.471Z"
+    },
+    {
+      "id": "grp_language",
+      "name": "International Polyglots & Culture Exchange",
+      "slug": "polyglots-culture",
+      "description": "Practice languages, discover customs, and connect with native speakers around the world. Friendly voice & chat sessions.",
+      "coverUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      "avatarUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80",
+      "creatorId": "usr_sofia",
+      "isPrivate": false,
+      "rules": "Respect all cultural backgrounds and encourage learners.",
+      "createdAt": "2026-10-08T00:39:35.471Z",
+      "updatedAt": "2026-10-22T06:39:35.471Z"
+    },
+    {
+      "id": "grp_sustainable",
+      "name": "EcoLiving & Community Gardens",
+      "slug": "ecoliving-gardens",
+      "description": "Private circle for urban farmers, permaculture enthusiasts, and zero-waste homesteaders.",
+      "coverUrl": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80",
+      "avatarUrl": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=400&q=80",
+      "creatorId": "usr_amara",
+      "isPrivate": true,
+      "rules": "Members must share a brief introduction to join. Local swaps and tips only.",
+      "createdAt": "2026-10-10T22:39:35.471Z",
+      "updatedAt": "2026-10-22T10:39:35.471Z"
+    },
+    {
+      "id": "grp_1792680811538_596m",
+      "name": "Automated Test Group 1792680811536",
+      "slug": "automated-test-group-1792680811536",
+      "description": "Test community creation",
+      "coverUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+      "avatarUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400&q=80",
+      "creatorId": "usr_elena",
+      "isPrivate": false,
+      "rules": "Be respectful, authentic, and helpful.",
+      "createdAt": "2026-10-22T14:53:31.538Z",
+      "updatedAt": "2026-10-22T14:53:31.538Z"
+    }
+  ],
+  "groupMembers": [
+    {
+      "id": "gm_1",
+      "groupId": "grp_creatives",
+      "userId": "usr_elena",
+      "role": "admin",
+      "status": "approved",
+      "joinedAt": "2026-10-01T18:39:35.471Z"
+    },
+    {
+      "id": "gm_2",
+      "groupId": "grp_creatives",
+      "userId": "usr_marcus",
+      "role": "moderator",
+      "status": "approved",
+      "joinedAt": "2026-10-03T20:39:35.471Z"
+    },
+    {
+      "id": "gm_3",
+      "groupId": "grp_creatives",
+      "userId": "usr_sofia",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-05T22:39:35.471Z"
+    },
+    {
+      "id": "gm_4",
+      "groupId": "grp_indiedev",
+      "userId": "usr_kenji",
+      "role": "admin",
+      "status": "approved",
+      "joinedAt": "2026-10-05T22:39:35.471Z"
+    },
+    {
+      "id": "gm_5",
+      "groupId": "grp_indiedev",
+      "userId": "usr_marcus",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-06T18:39:35.471Z"
+    },
+    {
+      "id": "gm_6",
+      "groupId": "grp_language",
+      "userId": "usr_sofia",
+      "role": "admin",
+      "status": "approved",
+      "joinedAt": "2026-10-08T00:39:35.471Z"
+    },
+    {
+      "id": "gm_7",
+      "groupId": "grp_language",
+      "userId": "usr_elena",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-08T10:39:35.471Z"
+    },
+    {
+      "id": "gm_8",
+      "groupId": "grp_language",
+      "userId": "usr_kenji",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-09T06:39:35.471Z"
+    },
+    {
+      "id": "gm_9",
+      "groupId": "grp_sustainable",
+      "userId": "usr_amara",
+      "role": "admin",
+      "status": "approved",
+      "joinedAt": "2026-10-10T22:39:35.471Z"
+    },
+    {
+      "id": "gm_10",
+      "groupId": "grp_sustainable",
+      "userId": "usr_elena",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-12T04:39:35.471Z"
+    },
+    {
+      "id": "gm_11",
+      "groupId": "grp_sustainable",
+      "userId": "usr_marcus",
+      "role": "member",
+      "status": "pending",
+      "joinedAt": "2026-10-22T12:39:35.471Z"
+    },
+    {
+      "id": "gm_1792680811538",
+      "groupId": "grp_1792680811538_596m",
+      "userId": "usr_elena",
+      "role": "admin",
+      "status": "approved",
+      "joinedAt": "2026-10-22T14:53:31.538Z"
+    },
+    {
+      "id": "gm_1792680811541_4nry",
+      "groupId": "grp_1792680811538_596m",
+      "userId": "usr_1792680811478_ewltq",
+      "role": "member",
+      "status": "approved",
+      "joinedAt": "2026-10-22T14:53:31.541Z"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv_1",
+      "createdAt": "2026-10-18T10:39:35.471Z",
+      "updatedAt": "2026-10-22T12:39:35.471Z",
+      "lastMessageAt": "2026-10-22T14:53:31.547Z"
+    },
+    {
+      "id": "conv_2",
+      "createdAt": "2026-10-20T12:39:35.471Z",
+      "updatedAt": "2026-10-22T06:39:35.471Z",
+      "lastMessageAt": "2026-10-22T06:39:35.471Z"
+    }
+  ],
+  "conversationMembers": [
+    {
+      "id": "cm_1",
+      "conversationId": "conv_1",
+      "userId": "usr_elena",
+      "lastReadAt": "2026-10-22T14:53:31.547Z"
+    },
+    {
+      "id": "cm_2",
+      "conversationId": "conv_1",
+      "userId": "usr_marcus",
+      "lastReadAt": "2026-10-22T13:39:35.471Z"
+    },
+    {
+      "id": "cm_3",
+      "conversationId": "conv_2",
+      "userId": "usr_elena",
+      "lastReadAt": "2026-10-22T07:39:35.471Z"
+    },
+    {
+      "id": "cm_4",
+      "conversationId": "conv_2",
+      "userId": "usr_sofia",
+      "lastReadAt": "2026-10-22T06:39:35.471Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1",
+      "conversationId": "conv_1",
+      "senderId": "usr_marcus",
+      "content": "Hi Elena! Did you see the new palette options for the KONEKTA project?",
+      "createdAt": "2026-10-22T10:39:35.471Z"
+    },
+    {
+      "id": "msg_2",
+      "conversationId": "conv_1",
+      "senderId": "usr_elena",
+      "content": "Yes! The midnight navy paired with turquoise and royal blue feels energetic and very crisp.",
+      "createdAt": "2026-10-22T11:39:35.471Z"
+    },
+    {
+      "id": "msg_3",
+      "conversationId": "conv_1",
+      "senderId": "usr_marcus",
+      "content": "Awesome. I am finishing the responsive view tests now so everything feels effortless on both mobile and desktop.",
+      "createdAt": "2026-10-22T12:39:35.471Z"
+    },
+    {
+      "id": "msg_4",
+      "conversationId": "conv_2",
+      "senderId": "usr_sofia",
+      "content": "Elena! Whenever you are in Europe next, we must organize a photography walk together.",
+      "createdAt": "2026-10-22T05:39:35.471Z"
+    },
+    {
+      "id": "msg_5",
+      "conversationId": "conv_2",
+      "senderId": "usr_elena",
+      "content": "Count me in! I will bring my 35mm lens and we will find the best rooftop vistas.",
+      "createdAt": "2026-10-22T06:39:35.471Z"
+    },
+    {
+      "id": "msg_1792680811547_av3w",
+      "conversationId": "conv_1",
+      "senderId": "usr_elena",
+      "content": "Confidential message for Marcus",
+      "createdAt": "2026-10-22T14:53:31.547Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1792680811548",
+      "recipientId": "usr_marcus",
+      "actorId": "usr_elena",
+      "type": "new_message",
+      "entityId": "conv_1",
+      "text": "Elena Vance: Confidential message for Marcus...",
+      "isRead": false,
+      "createdAt": "2026-10-22T14:53:31.547Z"
+    },
+    {
+      "id": "notif_1792680811536",
+      "recipientId": "usr_kenji",
+      "actorId": "usr_elena",
+      "type": "friend_accept",
+      "entityId": "fs_1792680811536",
+      "text": "Elena Vance accepted your friend request.",
+      "isRead": false,
+      "createdAt": "2026-10-22T14:53:31.536Z"
+    },
+    {
+      "id": "notif_1",
+      "recipientId": "usr_elena",
+      "actorId": "usr_kenji",
+      "type": "friend_request",
+      "entityId": "fr_1",
+      "text": "Kenji Sato sent you a friend request.",
+      "isRead": false,
+      "createdAt": "2026-10-22T06:39:35.471Z"
+    },
+    {
+      "id": "notif_2",
+      "recipientId": "usr_elena",
+      "actorId": "usr_marcus",
+      "type": "post_reaction",
+      "entityId": "post_1",
+      "text": "Marcus Sterling loved your post.",
+      "isRead": false,
+      "createdAt": "2026-10-22T09:39:35.471Z"
+    },
+    {
+      "id": "notif_3",
+      "recipientId": "usr_elena",
+      "actorId": "usr_marcus",
+      "type": "post_comment",
+      "entityId": "post_1",
+      "text": "Marcus Sterling commented on your post.",
+      "isRead": true,
+      "createdAt": "2026-10-22T09:39:35.471Z"
+    }
+  ],
+  "reports": [],
+  "blocks": [],
+  "otpCodes": [
+    {
+      "id": "otp_1792680745267_1kk5",
+      "phone": "+639171234567",
+      "code": "383265",
+      "purpose": "login",
+      "expiresAt": "2026-10-22T14:57:25.267Z",
+      "attempts": 1,
+      "resendAvailableAt": "2026-10-22T14:53:25.267Z",
+      "verified": true,
+      "createdAt": "2026-10-22T14:52:25.267Z"
+    },
+    {
+      "id": "otp_1792680811495_g89g",
+      "phone": "+63999236312",
+      "code": "423663",
+      "purpose": "register",
+      "expiresAt": "2026-10-22T14:58:31.495Z",
+      "attempts": 1,
+      "resendAvailableAt": "2026-10-22T14:54:31.495Z",
+      "verified": true,
+      "createdAt": "2026-10-22T14:53:31.495Z"
+    }
+  ],
+  "passwordResetTokens": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "KONEKTA - Social Networking Platform",
+  "description": "KONEKTA is an international social networking platform bringing people closer through real connections, communities, posts, and messaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
