@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { apiRouter } from './src/server/api.ts';
 import { getDatabase } from './src/server/db.ts';
@@ -19,8 +20,18 @@ async function startServer() {
 
   // Dev vs Prod Vite mounting
   const isProduction = process.env.NODE_ENV === 'production';
+  const distPath = path.resolve(process.cwd(), 'dist');
+  const hasDist = fs.existsSync(path.join(distPath, 'index.html'));
 
-  if (!isProduction) {
+  if (isProduction && hasDist) {
+    app.use(express.static(distPath));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  } else {
+    if (isProduction && !hasDist) {
+      console.warn('⚠️ dist/index.html not found in production. Mounting Vite middleware fallback...');
+    }
     const vite = await createViteServer({
       server: {
         middlewareMode: true,
@@ -30,12 +41,6 @@ async function startServer() {
       appType: 'spa',
     });
     app.use(vite.middlewares);
-  } else {
-    const distPath = path.resolve(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
-    });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
