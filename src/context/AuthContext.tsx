@@ -47,6 +47,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (token) {
       try {
         const res = await api.getMe();
+        
+        // Awtomatikong burahin ang lumang demo accounts para lumabas agad ang Login at Install pop-up
+        const demoIds = ['usr_elena', 'usr_marcus', 'usr_sofia', 'usr_kenji', 'usr_amara'];
+        if (demoIds.includes(res.user.id) || res.user.email?.includes('elena@')) {
+          clearStoredToken();
+          setUser(null);
+          setProfile(null);
+          setIsLoading(false);
+          return;
+        }
+
         setUser(res.user);
         setProfile(res.user.profile || null);
         setIsLoading(false);
