@@ -13,7 +13,7 @@ import { NotificationsPage } from './pages/NotificationsPage.tsx';
 import { SearchPage } from './pages/SearchPage.tsx';
 import { SettingsPage } from './pages/SettingsPage.tsx';
 import { HelpPage } from './pages/HelpPage.tsx';
-import { AuthPage } from './pages/AuthPage.tsx';
+import AuthPage from './pages/AuthPage.tsx';
 
 function MainLayout() {
   const { isAuthenticated, isLoading, profile } = useAuth();
