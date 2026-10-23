@@ -29,6 +29,19 @@ interface AuthContextType {
     displayName?: string;
     username?: string;
   }) => Promise<void>;
+  sendEmailOtp: (email: string) => Promise<{
+    message: string;
+    email: string;
+    expiresInSeconds: number;
+    resendCooldownSeconds: number;
+    previewCode?: string;
+  }>;
+  verifyEmailOtp: (payload: {
+    email: string;
+    code: string;
+    displayName?: string;
+    username?: string;
+  }) => Promise<void>;
   switchAccount: (userId: string) => Promise<void>;
   logout: () => void;
   refreshUser: () => Promise<void>;
@@ -47,8 +60,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (token) {
       try {
         const res = await api.getMe();
-        
-        // Awtomatikong burahin ang lumang demo accounts para lumabas agad ang Login at Install pop-up
+        // Awtomatikong i-purge ang lumang demo account tokens mula sa localStorage
         const demoIds = ['usr_elena', 'usr_marcus', 'usr_sofia', 'usr_kenji', 'usr_amara'];
         if (demoIds.includes(res.user.id) || res.user.email?.includes('elena@')) {
           clearStoredToken();
@@ -68,7 +80,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     }
 
-    // Walang default demo account: mananatiling unauthenticated hangga't hindi naglo-login
+    // Clean real-user flow: if no valid token exists, remain logged out
     setUser(null);
     setProfile(null);
     setIsLoading(false);
@@ -112,6 +124,21 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setProfile(res.user.profile || null);
   };
 
+  const sendEmailOtp = async (email: string) => {
+    return api.sendEmailOtp(email);
+  };
+
+  const verifyEmailOtp = async (payload: {
+    email: string;
+    code: string;
+    displayName?: string;
+    username?: string;
+  }) => {
+    const res = await api.verifyEmailOtp(payload);
+    setUser(res.user);
+    setProfile(res.user.profile || null);
+  };
+
   const switchAccount = async (userId: string) => {
     setIsLoading(true);
     try {
@@ -143,10 +170,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const res = await api.updateProfile(updates);
     setProfile(res.profile);
     if (user) {
-      setUser({
-        ...user,
-        profile: res.profile,
-      });
+      setUser({ ...user, profile: res.profile });
     }
   };
 
@@ -161,6 +185,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         register,
         sendPhoneOtp,
         verifyPhoneOtp,
+        sendEmailOtp,
+        verifyEmailOtp,
         switchAccount,
         logout,
         refreshUser,
