@@ -13,8 +13,7 @@ import { NotificationsPage } from './pages/NotificationsPage.tsx';
 import { SearchPage } from './pages/SearchPage.tsx';
 import { SettingsPage } from './pages/SettingsPage.tsx';
 import { HelpPage } from './pages/HelpPage.tsx';
-import { LandingPage } from './pages/LandingPage.tsx';
-import { AuthModal } from './pages/AuthModal.tsx';
+import { AuthPage } from './pages/AuthPage.tsx';
 
 function MainLayout() {
   const { isAuthenticated, isLoading, profile } = useAuth();
@@ -22,10 +21,6 @@ function MainLayout() {
   const [selectedUsername, setSelectedUsername] = useState<string | null>(null);
   const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
   const [chatTargetUserId, setChatTargetUserId] = useState<string | null>(null);
-
-  // Auth modal
-  const [authModalOpen, setAuthModalOpen] = useState(false);
-  const [authModalMode, setAuthModalMode] = useState<'login' | 'signup' | 'forgot'>('login');
 
   const handleSelectUser = (username: string) => {
     setSelectedUsername(username);
@@ -58,36 +53,21 @@ function MainLayout() {
     );
   }
 
-  // If user explicitly chose landing page or is logged out and not trying to view app
-  if (!isAuthenticated && activeTab === 'landing') {
+  // Direktang pumupunta sa Log In / Sign Up page kapag hindi pa naka-login
+  if (!isAuthenticated) {
     return (
-      <>
-        <LandingPage
-          onGetStarted={() => {
-            setAuthModalMode('signup');
-            setAuthModalOpen(true);
-          }}
-          onLogin={() => {
-            setAuthModalMode('login');
-            setAuthModalOpen(true);
-          }}
-          onTryDemo={() => {
-            setActiveTab('feed');
-          }}
-        />
-        <AuthModal
-          isOpen={authModalOpen}
-          initialMode={authModalMode}
-          onClose={() => setAuthModalOpen(false)}
-          onSuccess={() => setActiveTab('feed')}
-        />
-      </>
+      <AuthPage
+        defaultMode="login"
+        onAuthSuccess={() => {
+          setActiveTab('feed');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      />
     );
   }
 
   return (
     <div className="min-h-screen bg-[#F4F7FB] flex flex-col">
-      {/* Top Navigation */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={(tab) => {
@@ -98,9 +78,7 @@ function MainLayout() {
         onSelectGroup={handleSelectGroup}
       />
 
-      {/* Main Content View with Sidebar */}
       <div className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 pb-20 md:pb-6 flex gap-6">
-        {/* Left Desktop Sidebar */}
         <Sidebar
           activeTab={activeTab}
           setActiveTab={(tab) => {
@@ -110,7 +88,6 @@ function MainLayout() {
           onSelectUser={handleSelectUser}
         />
 
-        {/* Central Display */}
         <main className="flex-1 min-w-0">
           {activeTab === 'feed' && (
             <FeedPage
@@ -185,21 +162,12 @@ function MainLayout() {
         </main>
       </div>
 
-      {/* Mobile Bottom Navigation */}
       <MobileNav
         activeTab={activeTab}
         setActiveTab={(tab) => {
           setActiveTab(tab);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-      />
-
-      {/* Auth Modal if triggered */}
-      <AuthModal
-        isOpen={authModalOpen}
-        initialMode={authModalMode}
-        onClose={() => setAuthModalOpen(false)}
-        onSuccess={() => setActiveTab('feed')}
       />
     </div>
   );

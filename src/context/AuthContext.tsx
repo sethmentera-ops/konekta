@@ -57,16 +57,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     }
 
-    // Default to Elena Vance as the active demo user on initial load for instant rich experience
-    try {
-      const res = await api.switchDemoAccount('usr_elena');
-      setUser(res.user);
-      setProfile(res.user.profile || null);
-    } catch (err) {
-      console.error('Failed to init default demo user:', err);
-    } finally {
-      setIsLoading(false);
-    }
+    // Walang default demo account: mananatiling unauthenticated hangga't hindi naglo-login
+    setUser(null);
+    setProfile(null);
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -138,7 +132,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const res = await api.updateProfile(updates);
     setProfile(res.profile);
     if (user) {
-      setUser({ ...user, profile: res.profile });
+      setUser({
+        ...user,
+        profile: res.profile,
+      });
     }
   };
 
