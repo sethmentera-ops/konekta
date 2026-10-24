@@ -120,6 +120,33 @@ export const api = {
     return res;
   },
 
+  async sendEmailOtp(email: string) {
+    return request<{
+      message: string;
+      email: string;
+      expiresInSeconds: number;
+      resendCooldownSeconds: number;
+      previewCode?: string;
+    }>('/api/auth/email/send-otp', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  },
+
+  async verifyEmailOtp(payload: {
+    email: string;
+    code: string;
+    displayName?: string;
+    username?: string;
+  }) {
+    const res = await request<{ token: string; user: AuthUser; message: string }>('/api/auth/email/verify-otp', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+    setStoredToken(res.token);
+    return res;
+  },
+
   async forgotPassword(identifier: string) {
     return request<{ message: string; demoResetToken?: string }>('/api/auth/forgot-password', {
       method: 'POST',
